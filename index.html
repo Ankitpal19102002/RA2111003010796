@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BFHL Challenge</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 50px;
+        }
+        .container {
+            width: 600px;
+            border: 1px solid #ccc;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        textarea {
+            width: 100%;
+            height: 100px;
+            margin-bottom: 10px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        select {
+            width: 100%;
+            margin-bottom: 10px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .response-container {
+            margin-top: 20px;
+        }
+        .response-container pre {
+            background: #f4f4f4;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>BFHL Challenge</h2>
+        <textarea id="jsonInput" placeholder="Enter JSON here"></textarea>
+        <button onclick="submitJson()">Submit</button>
+        <div id="responseContainer" class="response-container">
+            <label>Multi Filter:</label>
+            <select id="filterOptions" multiple>
+                <option value="Alphabets">Alphabets</option>
+                <option value="Numbers">Numbers</option>
+                <option value="Highest alphabet">Highest alphabet</option>
+            </select>
+            <button onclick="filterResponse()">Filter</button>
+            <pre id="responseOutput"></pre>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
